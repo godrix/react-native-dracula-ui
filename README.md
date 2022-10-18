@@ -2,7 +2,13 @@
 
 > A dark-first collection of UI patterns and components.
 
+>disclaimer: this is a work in progress, and is not yet ready for production use.
+
+
+
 ![Dracula UI](https://ui.draculatheme.com/static/og.jpg)
+
+## Dracula UI for react native is based on the [Dracula Ui](https://ui.draculatheme.com) project.
 
 ## :thinking: Why
 
