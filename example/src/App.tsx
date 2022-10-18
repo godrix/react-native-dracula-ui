@@ -1,27 +1,36 @@
 import * as React from 'react';
 
-import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-dracula-ui';
+import { StyleSheet, SafeAreaView } from 'react-native';
+import { Box, Text, Heading, Anchor } from 'react-native-dracula-ui';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
-
-  React.useEffect(() => {
-    multiply(3, 7).then(setResult);
-  }, []);
-
   return (
-    <View style={styles.container}>
-      <Text>Result: {result}</Text>
-    </View>
+    <SafeAreaView style={styles.container}>
+      <Box style={styles.container} color="blackSecondary" pt="sm" p="sm">
+        <Box borderColor="purple" rounded="xxl" p="md">
+          <Heading size="md">Godrix</Heading>
+          <Heading size="2xs" color="purple">
+            Software Developer
+          </Heading>
+          <Text>
+            Box is the most primitive component of
+            <Anchor href="https://ui.draculatheme.com/anchor">
+              Dracula UI.
+            </Anchor>{' '}
+            Using Box allows for consumers of the components library to compose
+            more complex patterns, components, and UIs. Box includes built-in
+            Color and Spacing properties that make building complex components
+            convenient and consistent.
+          </Text>
+        </Box>
+      </Box>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
   },
   box: {
     width: 60,
