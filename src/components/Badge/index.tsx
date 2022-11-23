@@ -7,8 +7,7 @@ import {
   marginMixin,
 } from '../../utils/spacing';
 import { Text } from '../Text';
-import { Box } from '../Box';
-import colors, { IBackgroundColors, IBorderColors } from '../../base/colors';
+import colors, { IBackgroundColors } from '../../base/colors';
 import badgeStyle from '../../styles/badge';
 /**
  * Badge Props
@@ -43,6 +42,7 @@ export function Badge(props: BadgeProps) {
 
   const finalProps = {
     ...viewProps,
+    overrideTextColor,
     style: [
       paddingMixin(props),
 
