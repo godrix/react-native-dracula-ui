@@ -7,6 +7,7 @@ import {
   PaddingMixin,
   marginMixin,
 } from '../../utils/spacing';
+import { flexMixin, FlexMixin } from '../../utils/flex';
 import sizes, { ISizes } from '../../base/sizes';
 import borders, { IBorderWidth } from '../../base/borders';
 
@@ -36,6 +37,7 @@ export type BoxProps = {
   // scrollbar?: keyof typeof scrollbarColors | boolean;
 } & MarginMixin &
   PaddingMixin &
+  FlexMixin &
   ViewProps;
 
 /**
@@ -56,6 +58,8 @@ export function Box(props: BoxProps) {
       paddingMixin(props),
 
       marginMixin(props),
+
+      flexMixin(props),
 
       color && { backgroundColor: colors.backgroundColors[color] },
 

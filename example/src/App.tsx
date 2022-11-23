@@ -1,12 +1,19 @@
 import * as React from 'react';
 
 import { StyleSheet, SafeAreaView } from 'react-native';
-import { Box, Text, Heading, Anchor, Avatar } from 'react-native-dracula-ui';
+import {
+  Box,
+  Text,
+  Heading,
+  Anchor,
+  Avatar,
+  Badge,
+} from 'react-native-dracula-ui';
 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <Box style={styles.container} color="blackSecondary" pt="sm" p="sm">
+      <Box f={1} color="blackSecondary" pt="sm" p="sm">
         <Box borderColor="purple" rounded="xxl" p="md">
           <Avatar title="Godrix" mb="sm" color="purple" borderVariant="large" />
           <Heading size="md">Godrix</Heading>
@@ -23,6 +30,7 @@ export default function App() {
             Color and Spacing properties that make building complex components
             convenient and consistent.
           </Text>
+          <Badge>kkk</Badge>
         </Box>
       </Box>
     </SafeAreaView>
